@@ -45,12 +45,12 @@ namespace CronExpressionParser
             String command = parsed[5];
            
             //Print output to console.
-            Console.WriteLine("{0,1}{1,40}", "minute", minutes);
-            Console.WriteLine("{0,1}{1,32}", "hours", hours);
-            Console.WriteLine("{0,1}{1,28}", "day of month", dayOfMonth);
-            Console.WriteLine("{0,1}{1,57}", "month", month);
-            Console.WriteLine("{0,1}{1,34}", "day of week", dayOfWeek);
-            Console.WriteLine("{0,1}{1,42}", "command", command);
+            Console.WriteLine(String.Format("minute\t\t\t\t{0}", minutes));
+            Console.WriteLine(String.Format("hours\t\t\t\t{0}", hours));
+            Console.WriteLine(String.Format("day of month\t\t\t{0}", dayOfMonth));
+            Console.WriteLine(String.Format("month\t\t\t\t{0}", month));
+            Console.WriteLine(String.Format("day of week\t\t\t{0}", dayOfWeek));
+            Console.WriteLine(String.Format("command\t\t\t\t{0}", command));
         }
     }
 }
