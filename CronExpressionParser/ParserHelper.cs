@@ -31,7 +31,7 @@ namespace CronExpressionParser
         /// </summary>
         private void ParseRangeValues()
         {
-            String[] range = expression.Split("-");
+            string[] range = expression.Split("-");
             if (range.Length == 2)
             {
                 int start = ParseNumber(range[0]);
@@ -52,11 +52,11 @@ namespace CronExpressionParser
         private void ParseStepValues()
         {
             if (expression.StartsWith("*"))
-            {                
-                String[] intervals = expression.Split("/");
+            {
+                string[] intervals = expression.Split("/");
                 if (intervals.Length > 2)
                 {
-                    throw new FormatException(String.Format("Too many expressions"));
+                    throw new FormatException(string.Format("Too many expressions"));
                 }
                 if (intervals.Length == 2)
                 {
@@ -105,7 +105,7 @@ namespace CronExpressionParser
             //check the range of the cron field.
             if (num == -1 || num < cronField.Start || num > cronField.End)
             {
-                throw new FormatException(String.Format("Value must be a number between {0} and {1} for {3}.", cronField.Start, cronField.End, cronField));
+                throw new FormatException(string.Format("Value must be a number between {0} and {1} for {3}.", cronField.Start, cronField.End, cronField));
             }
 
             return num;
